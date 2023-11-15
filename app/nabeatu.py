@@ -3,4 +3,4 @@ class Nabeatu:
         self.num = num
 
     def call(self):
-        return 1
+        return self.num
