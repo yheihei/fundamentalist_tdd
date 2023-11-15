@@ -3,6 +3,6 @@ class Nabeatu:
         self.num = num
 
     def call(self):
-        if self.num == 3:
-            return '3(バカ)'
+        if self.num % 3 == 0:
+            return f"{self.num}(バカ)"
         return self.num
