@@ -20,3 +20,10 @@ class TestNabeatu:
         with pytest.raises(ValueError) as e:
             Nabeatu('a').call()
         assert '数字を入れてください' == str(e.value)
+
+        # 0以下の値を入れたらValueErrorになる
+        with pytest.raises(ValueError) as e:
+            Nabeatu(0).call()
+        with pytest.raises(ValueError) as e:
+            Nabeatu(-1).call()
+        assert '1以上の数値を入れてください' == str(e.value)
