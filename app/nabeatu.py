@@ -8,7 +8,7 @@ class Nabeatu:
 
     def call(self) -> str:
         if self.num % 3 == 0:
-            return f"{self.num}(バカ)"
+            return f"{self.num}(アホ)"
         if  "3" in str(self.num):
-            return f"{self.num}(バカ)"
+            return f"{self.num}(アホ)"
         return str(self.num)
