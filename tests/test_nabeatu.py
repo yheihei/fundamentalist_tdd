@@ -25,3 +25,7 @@ class TestNabeatu:
         with pytest.raises(ValueError) as e:
             Nabeatu(-1).call()
         assert '1以上の数値を入れてください' == str(e.value)
+
+    def test_finale(self):
+        for i in range(1, 101):
+            print(Nabeatu(i).call())
