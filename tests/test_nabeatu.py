@@ -3,26 +3,23 @@ from app.nabeatu import Nabeatu
 
 
 class TestNabeatu:
-    def test_正常系(self):
-
-        # 1以上の数値かつ3の倍数でも3が付く数字でもない場合はそのまま文字列として返す
+    def test_1以上の数値かつ3の倍数でも3が付く数字でもない場合はそのまま文字列として返す(self):
         assert "1" == Nabeatu(1).call()
 
-        # 3の倍数の場合バカになる
+    def test_3の倍数の場合バカになる(self):
         assert '3(バカ)' == Nabeatu(3).call()
         assert '9(バカ)' == Nabeatu(9).call()
         assert '12(バカ)' == Nabeatu(12).call()
 
-        # 3が付く数字の場合もバカになる
+    def test_3が付く数字の場合もバカになる(self):
         assert '13(バカ)' == Nabeatu(13).call()
 
-    def test_準正常系(self):
-        # 数字以外を入れたらValueErrorになる
+    def test_数字以外を入れたらValueErrorになる(self):
         with pytest.raises(ValueError) as e:
             Nabeatu('a').call()
         assert '数字を入れてください' == str(e.value)
 
-        # 0以下の値を入れたらValueErrorになる
+    def test_0以下の値を入れたらValueErrorになる(self):
         with pytest.raises(ValueError) as e:
             Nabeatu(0).call()
         with pytest.raises(ValueError) as e:
