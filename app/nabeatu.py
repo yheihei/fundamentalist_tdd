@@ -3,4 +3,6 @@ class Nabeatu:
         self.num = num
 
     def call(self):
+        if self.num == 3:
+            return '3(バカ)'
         return self.num
