@@ -5,7 +5,8 @@ from app.nabeatu import Nabeatu
 class TestNabeatu:
     def test_正常系(self):
 
-        assert 1 == Nabeatu(1).call()
+        # 1以上の数値かつ3の倍数でも3が付く数字でもない場合はそのまま文字列として返す
+        assert "1" == Nabeatu(1).call()
 
         # 3の倍数の場合バカになる
         assert '3(バカ)' == Nabeatu(3).call()
