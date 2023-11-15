@@ -3,7 +3,7 @@ from app.nabeatu import Nabeatu
 
 
 class TestNabeatu:
-    def test_1(self):
+    def test_正常系(self):
 
         assert 1 == Nabeatu(1).call()
 
@@ -14,3 +14,9 @@ class TestNabeatu:
 
         # 3が付く数字の場合もバカになる
         assert '13(バカ)' == Nabeatu(13).call()
+
+    def test_準正常系(self):
+        # 数字以外を入れたらValueErrorになる
+        with pytest.raises(ValueError) as e:
+            Nabeatu('a').call()
+        assert '数字を入れてください' == str(e.value)
