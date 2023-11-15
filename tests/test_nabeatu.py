@@ -1,4 +1,5 @@
 import pytest
+from app.nabeatu import Nabeatu
 
 
 class TestNabeatu:
