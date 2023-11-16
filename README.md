@@ -42,6 +42,8 @@ pytest -s -p no:warnings
 
 TDDのサイクルを使って、世界のナベアツクラスを作ろう
 
+[解答例はこちら](https://github.com/yheihei/fundamentalist_tdd/tree/demo)
+
 ## 世界のナベアツクラスの仕様
 
 * 数字を入れたら数字を返す
