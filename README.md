@@ -1,8 +1,7 @@
 # 環境構築
 
 ```
-poetry install --no-root
-poetry shell
+pip install pytest
 ```
 
 # テスト実行方法
