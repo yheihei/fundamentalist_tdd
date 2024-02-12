@@ -1,7 +1,7 @@
 # 環境構築
 
 ```
-poetry install
+poetry install --no-root
 poetry shell
 ```
 
